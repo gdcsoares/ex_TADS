@@ -1,6 +1,17 @@
+CC=gcc
+CFLAGS=-lm
+DEPS= main.h data.h
+OBJ=main.o data.o
 
+%.o: %.c $(DEPS)
+	$(CC) -c -o $@ $< $(CFLAGS)
 
-all:
-	gcc -Wall -g -o main main.c data/*.c 
+ponto: $(OBJ)
+	$(CC) -o $@ $^ $(CFLAGS)
+	echo "Compilado!"
+
 clean:
-	rm -f main
+	rm -rf *.o main
+
+run:
+	./main

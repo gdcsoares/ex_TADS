@@ -3,9 +3,6 @@
 #include "data.h"
 
 int main(){
-    tData data;
-    tData dataIni;
-    tDAta dataFim;
     int difDias;
 
     dataIni = le_data();
