@@ -7,7 +7,7 @@ struct data{
     int mes;
     int ano;
 
-}
+};
 
 tData le_data(){
     char data;
